@@ -14,10 +14,6 @@ class PageModel:
             division_button = self.driver.find_element(value="com.vbanthia.androidsampleapp:id/divisionButton"),
         )
 
-    def __del__(self):
-        if (self.driver != None):
-            self.driver.quit()
-
     def set_left_input(self, keys):
         self.locators["input_field_left"].send_keys(keys)
 
