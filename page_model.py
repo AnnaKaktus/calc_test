@@ -1,8 +1,6 @@
-from appium import webdriver
-
 class PageModel:
-    def __init__(self, desired_caps, path):
-        self.driver = webdriver.Remote(path, desired_caps)
+    def __init__(self, driver):
+        self.driver = driver
         self.locators = dict(
             input_field_left = self.driver.find_element(value="com.vbanthia.androidsampleapp:id/inputFieldLeft"),
             input_field_right = self.driver.find_element(value="com.vbanthia.androidsampleapp:id/inputFieldRight"),
@@ -37,3 +35,27 @@ class PageModel:
 
     def click_division(self):
         self.locators["division_button"].click()
+
+    def addition(self, left, right):
+        self.reset()
+        self.set_left_input(left)
+        self.set_right_input(right)
+        self.click_addition()
+
+    def substract(self, left, right):
+        self.reset()
+        self.set_left_input(left)
+        self.set_right_input(right)
+        self.click_substract()
+
+    def multiplication(self, left, right):
+        self.reset()
+        self.set_left_input(left)
+        self.set_right_input(right)
+        self.click_multiplication()
+
+    def division(self, left, right):
+        self.reset()
+        self.set_left_input(left)
+        self.set_right_input(right)
+        self.click_division()
