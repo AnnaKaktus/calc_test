@@ -2,7 +2,7 @@ from appium import webdriver
 from page_model import PageModel
 
 # change to real path to apk
-PATH_TO_APK = "/Users/anna/Downloads/simple-tester-task/app-debug.apk"
+PATH_TO_APK = "app-debug.apk"
 
 desired_caps = {
     "platformName":"Android",
