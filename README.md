@@ -1,4 +1,4 @@
-# autotests with appium for drom
+# autotests with appium for calculator
 ## Автотесты для тестового задания Калькулятор
 С помощью данных тестов осуществляется smoke-тестирование приложения (проверка основного функционала)
 
